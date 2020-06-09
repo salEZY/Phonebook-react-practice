@@ -100,15 +100,14 @@ input[type="text"] {
 
   .input-add-container input,
   .input-add-container input[type="submit"] {
-    width: 80%;
-    margin: 10px auto;
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 500px) {
   .input-add-container input,
   .input-add-container input[type="submit"] {
-    width: 50%;
+    width: 80%;
     margin: 10px auto;
   }
 }

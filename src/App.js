@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import AddForm from "./components/AddForm";
+import Search from "./components/Search";
+import Phonebook from "./components/Phonebook";
 
 export const App = () => {
   const [name, setName] = useState("");
@@ -90,115 +93,21 @@ export const App = () => {
 
   return (
     <div className="container">
-      <form
-        className="input-add-container"
-        onSubmit={(e) => onSubmitHandler(e)}
-      >
-        <input
-          value={name}
-          type="text"
-          placeholder="Ime"
-          onChange={(e) => setName(e.target.value)}
-        ></input>
-        <input
-          value={number}
-          type="text"
-          placeholder="Broj"
-          onChange={(e) => setNumber(e.target.value)}
-        ></input>
-        <input type="submit" value="Dodaj" className="button" />
-      </form>
-      <h3>
-        Trazi po imenu <i className="fa fa-search" aria-hidden="true"></i>
-      </h3>
-      <input
-        type="text"
-        placeholder="Trazi"
-        onChange={onFilterHandler}
-        style={{ margin: "0 0 20px 0" }}
-      ></input>
-      <h1>
-        Imenik <i className="fa fa-address-book-o" aria-hidden="true"></i>
-      </h1>
-      {favorite.length === 0 && sAddressBook.length === 0 ? (
-        <p>Nemate dodate kontakte.</p>
-      ) : (
-        <>
-          <div className="address-book">
-            <div className="favorites">
-              <h3>Omiljeni kontakti:</h3>
-              {favorite.length === 0 ? (
-                <p>Nemate omiljenih kontakata</p>
-              ) : (
-                favorite.map((fav) => (
-                  <p key={fav.name} style={{ fontWeight: "bolder" }}>
-                    {fav.name} - {fav.number}
-                    <span
-                      onClick={() => onDeleteHandler(fav.name, "fav")}
-                      style={{
-                        color: "red",
-                        fontSize: "25px",
-                        fontWeight: "bolder",
-                        cursor: "pointer",
-                        padding: "0 10px",
-                      }}
-                    >
-                      <i className="fa fa-times" aria-hidden="true"></i>
-                    </span>
-                  </p>
-                ))
-              )}
-            </div>
-            <div className="contacts">
-              <h3>Kontakti:</h3>
-              {sAddressBook.length === 0 ? (
-                <p>Nema kontakata!</p>
-              ) : (
-                sAddressBook.map((address) => (
-                  <p key={address.name}>
-                    {address.name} - {address.number}
-                    <span
-                      onClick={() => onDeleteHandler(address.name, "address")}
-                      style={{
-                        color: "red",
-                        fontSize: "25px",
-                        fontWeight: "bolder",
-                        cursor: "pointer",
-                        borderRight: "2px solid black",
-                        padding: "0 10px",
-                      }}
-                    >
-                      <i className="fa fa-times" aria-hidden="true"></i>
-                    </span>
-                    <span
-                      onClick={() =>
-                        favoriteHandler(address.name, address.number)
-                      }
-                      style={{
-                        color: "orange",
-                        fontSize: "20px",
-                        fontWeight: "bolder",
-                        cursor: "pointer",
-                        padding: "10px",
-                      }}
-                    >
-                      <i className="fa fa-star" aria-hidden="true"></i>
-                    </span>
-                  </p>
-                ))
-              )}
-            </div>
-          </div>
-          <>
-            <button onClick={() => sortAscDesc("desc")} className="button">
-              Z-A
-            </button>
-            <button onClick={() => sortAscDesc("asc")} className="button">
-              A-Z
-            </button>
-          </>
-        </>
-      )}
+      <AddForm
+        onSubmitHandler={onSubmitHandler}
+        name={name}
+        number={number}
+        setName={setName}
+        setNumber={setNumber}
+      />
+      <Search onFilterHandler={onFilterHandler} />
+      <Phonebook
+        favorite={favorite}
+        sAddressBook={sAddressBook}
+        onDeleteHandler={onDeleteHandler}
+        favoriteHandler={favoriteHandler}
+        sortAscDesc={sortAscDesc}
+      />
     </div>
   );
 };
