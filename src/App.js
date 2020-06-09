@@ -115,7 +115,7 @@ export const App = () => {
         type="text"
         placeholder="Trazi"
         onChange={onFilterHandler}
-        style={{ margin: "20px auto" }}
+        style={{ margin: "0 0 20px 0" }}
       ></input>
       <h1>
         Imenik <i className="fa fa-address-book-o" aria-hidden="true"></i>
