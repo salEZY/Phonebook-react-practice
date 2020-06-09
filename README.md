@@ -1,3 +1,3 @@
 ## PhoneBook
 
-Simple phonebook app created in React.
+Simple phonebook app created in React with minimal CSS.

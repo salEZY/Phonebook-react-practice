@@ -13,12 +13,16 @@ code {
     monospace;
 }
 
+h1 {
+  font-family: Verdana, sans-serif;
+}
+
 .container {
   width: 50%;
   margin: 100px auto;
   padding: 20px;
   border-radius: 2em 1em 4em / 0.5em 3em;
-  box-shadow: 0 5px 20px ghostwhite;
+  box-shadow: 0 5px 10px ghostwhite;
   text-align: center;
   background: white;
 }
@@ -44,7 +48,8 @@ code {
   margin: 20px;
   color: ghostwhite;
   background: #73a6c8;
-  font-size: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
   border: 2px solid ghostwhite;
   border-radius: 2em / 5em;
   cursor: pointer;
@@ -54,6 +59,16 @@ code {
   color: #73a6c8;
   background: ghostwhite;
   border: 2px solid #73a6c8;
+}
+
+.address-book {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacts,
+.favorites {
+  width: 50%;
 }
 
 .address-book p {
