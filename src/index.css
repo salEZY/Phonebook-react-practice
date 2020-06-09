@@ -46,7 +46,7 @@ code {
   background: #73a6c8;
   font-size: 20px;
   border: 2px solid ghostwhite;
-  border-radius: 5px;
+  border-radius: 2em / 5em;
   cursor: pointer;
 }
 
