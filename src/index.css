@@ -104,3 +104,11 @@ input[type="text"] {
     margin: 10px auto;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .input-add-container input,
+  .input-add-container input[type="submit"] {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
