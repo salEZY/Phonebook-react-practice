@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Phonebook-react-practice/static/css/main.2a4c4ab6.chunk.css",
+    "main.js": "/Phonebook-react-practice/static/js/main.fa139f1f.chunk.js",
+    "main.js.map": "/Phonebook-react-practice/static/js/main.fa139f1f.chunk.js.map",
+    "runtime-main.js": "/Phonebook-react-practice/static/js/runtime-main.99a2d480.js",
+    "runtime-main.js.map": "/Phonebook-react-practice/static/js/runtime-main.99a2d480.js.map",
+    "static/js/2.084337d4.chunk.js": "/Phonebook-react-practice/static/js/2.084337d4.chunk.js",
+    "static/js/2.084337d4.chunk.js.map": "/Phonebook-react-practice/static/js/2.084337d4.chunk.js.map",
+    "index.html": "/Phonebook-react-practice/index.html",
+    "precache-manifest.10dc53e2f171be94b87b6caf54ec3be3.js": "/Phonebook-react-practice/precache-manifest.10dc53e2f171be94b87b6caf54ec3be3.js",
+    "service-worker.js": "/Phonebook-react-practice/service-worker.js",
+    "static/css/main.2a4c4ab6.chunk.css.map": "/Phonebook-react-practice/static/css/main.2a4c4ab6.chunk.css.map",
+    "static/js/2.084337d4.chunk.js.LICENSE.txt": "/Phonebook-react-practice/static/js/2.084337d4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99a2d480.js",
+    "static/js/2.084337d4.chunk.js",
+    "static/css/main.2a4c4ab6.chunk.css",
+    "static/js/main.fa139f1f.chunk.js"
+  ]
+}
